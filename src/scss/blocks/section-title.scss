@@ -1,15 +1,3 @@
 @use "../mixins";
 
-.section-title {
-  font-family: var(--font-family-title);
-  font-weight: 700;
-  font-size: 35px;
-  line-height: 48px;
-  text-transform: uppercase;
-  color: var(--color-mine-shaft);
-
-  @include mixins.respond-to(mobileOnly) {
-    font-size: 25px;
-    line-height: 35px;
-  }
-}
+.section-title {}
