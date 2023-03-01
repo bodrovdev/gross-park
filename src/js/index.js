@@ -21,6 +21,7 @@ burger.addEventListener('click', () => {
 // - Закрытие по клику на пункт меню
 nav_list.onclick = function (event) {
   let target = event.target;
+  console.log(target.tagName);
 
   if (target.tagName != 'A') return;
 
@@ -33,13 +34,13 @@ nav_list.onclick = function (event) {
 };
 
 //Плавный скроллинг до якорных ссылок
-$('a[href^="#"]').on('click', function (e) {
-  e.preventDefault();
+// $('a[href^="#"]').on('click', function (e) {
+//   e.preventDefault();
 
-  var id = $(this).attr('href'),
-    top = $(id).offset().top;
+//   var id = $(this).attr('href'),
+//     top = $(id).offset().top;
 
-  $('body,html').animate({
-    scrollTop: top
-  }, 0);
-});
+//   $('body,html').animate({
+//     scrollTop: top
+//   }, 0);
+// });

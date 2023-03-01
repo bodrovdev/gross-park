@@ -1,0 +1,20 @@
+@use "../mixins";
+
+.main-button {
+  height: 58px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: var(--color-selective-yellow);
+  border-radius: 7px;
+
+  font-family: var(--font-family-second);
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 27px;
+  text-transform: uppercase;
+
+  padding: 17px 5px 17px 5px;
+}

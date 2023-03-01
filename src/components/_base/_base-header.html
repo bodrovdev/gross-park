@@ -22,33 +22,54 @@
         <div class="main-nav__container base-container">
 
           <a class="main-nav__logo-link base-link" href="index.html">
-            <figure class="main-nav__logo-image base-figure">
-              <img class="main-nav__logo-img" src="img/image/logo.svg" width="#" height="#" alt="Логотип">
-            </figure>
+            <svg class="main-nav__logo-icon" width="138" height="61" alt="#">
+              <use href="img/icon/sprite.svg#logo-icon"></use>
+            </svg>
           </a>
 
           <div class="main-nav__nav-menu main-nav__nav-menu--mobile" id="mobile_menu">
 
-            <!-- <a class="main-nav__logo-link main-nav__logo-link--mobile base-link" href="index.html">
-              <figure class="main-nav__logo-image base-figure">
-                <img class="main-nav__logo-img" src="img/image/logo.svg" width="#" height="#" alt="Логотип">
-              </figure>
-            </a> -->
+            <a class="main-nav__logo-link main-nav__logo-link--mobile base-link" href="index.html">
+              <svg class="main-nav__logo-icon" width="138" height="61" alt="#">
+                <use href="img/icon/sprite.svg#logo-icon"></use>
+              </svg>
+            </a>
 
             <ul class="main-nav__nav-list base-list">
               <li class="main-nav__nav-item">
-                <a class="main-nav__nav-link base-link" href="#"></a>
+                <a class="main-nav__nav-link base-link" href="#">Каталог</a>
               </li>
               <li class="main-nav__nav-item">
-                <a class="main-nav__nav-link base-link" href="#"></a>
+                <a class="main-nav__nav-link base-link" href="#">Услуги</a>
               </li>
               <li class="main-nav__nav-item">
-                <a class="main-nav__nav-link base-link" href="#"></a>
+                <a class="main-nav__nav-link base-link" href="#">О компании</a>
               </li>
               <li class="main-nav__nav-item">
-                <a class="main-nav__nav-link base-link" href="#"></a>
+                <a class="main-nav__nav-link base-link" href="#">Контакты</a>
               </li>
             </ul>
+
+            <div class="main-nav__socials">
+              <a class="main-nav__socials-link base-link" href="">
+                <svg class="main-nav__socials-icon" width="24" height="25" alt="#">
+                  <use href="img/icon/sprite.svg#socials-1-icon"></use>
+                </svg>
+              </a>
+              <a class="main-nav__socials-link base-link" href="">
+                <svg class="main-nav__socials-icon" width="24" height="21" alt="#">
+                  <use href="img/icon/sprite.svg#socials-2-icon"></use>
+                </svg>
+              </a>
+              <a class="main-nav__socials-link base-link" href="">
+                <svg class="main-nav__socials-icon" width="24" height="15" alt="#">
+                  <use href="img/icon/sprite.svg#socials-3-icon"></use>
+                </svg>
+              </a>
+            </div>
+
+            <a class="main-nav__tel base-link" href="tel:+7(495)1274590">+7(495)1274590</a>
+            <a class="main-nav__main-button main-button base-link" href="#">Заказать звонок</a>
 
           </div>
           <button class="main-nav__burger base-button" id="burger">

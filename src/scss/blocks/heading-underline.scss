@@ -1,0 +1,7 @@
+@use "../mixins";
+
+.heading-underline {
+  width: 100%;
+  height: 14px;
+  background-color: var(--color-selective-yellow);
+}

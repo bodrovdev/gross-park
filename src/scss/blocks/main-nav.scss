@@ -89,14 +89,21 @@
 
   width: 100%;
   min-width: 50px;
+  height: 89px;
 
-  margin: 33px 0 0 0;
+  margin: 24px 0 0 0;
+
+  z-index: 10;
 
   @include mixins.respond-to(mobileOnly) {
     margin: 23px 0 0 0;
   }
 
   @include mixins.respond-to(tabletOnly) {
+    margin: 23px 0 0 0;
+  }
+
+  @include mixins.respond-to(desktopSOnly) {
     margin: 23px 0 0 0;
   }
 
@@ -111,18 +118,26 @@
     @include mixins.respond-to(tabletOnly) {
       justify-content: space-between;
     }
+
+    @include mixins.respond-to(desktopSOnly) {
+      justify-content: space-between;
+    }
   }
 
   &__logo-link {
     transition: transform 0.3s;
 
-    margin: 0 100px 0 0;
+    margin: 0 121px 0 0;
 
     @include mixins.respond-to(mobileOnly) {
       margin: 0;
     }
 
     @include mixins.respond-to(tabletOnly) {
+      margin: 0;
+    }
+
+    @include mixins.respond-to(desktopSOnly) {
       margin: 0;
     }
 
@@ -144,18 +159,10 @@
     @include mixins.respond-to(tabletOnly) {
       display: inline-block;
     }
-  }
 
-  &__logo-image {
-    display: block;
-    width: fit-content;
-    height: fit-content;
-  }
-
-  &__logo-img {
-    display: block;
-
-    vertical-align: top
+    @include mixins.respond-to(desktopSOnly) {
+      display: inline-block;
+    }
   }
 
   &__nav-menu {
@@ -168,6 +175,8 @@
   &__nav-list {
     display: flex;
     align-items: center;
+
+    margin: 0 97px 0 0;
 
     @include mixins.respond-to(mobileOnly) {
       flex-direction: column;
@@ -186,10 +195,19 @@
 
       margin: 0 0 50px 0
     }
+
+    @include mixins.respond-to(desktopSOnly) {
+      flex-direction: column;
+      align-items: flex-start;
+
+      width: 100%;
+
+      margin: 0 0 50px 0
+    }
   }
 
   &__nav-item {
-    margin: 0 25px 0 0;
+    margin: 0 46px 0 0;
 
     &:last-child {
       margin: 0;
@@ -206,21 +224,29 @@
 
       margin: 0 0 30px 0;
     }
+
+    @include mixins.respond-to(desktopSOnly) {
+      width: 100%;
+
+      margin: 0 0 30px 0;
+    }
   }
 
   &__nav-link {
+    font-family: var(--font-family-second);
     font-weight: 400;
-    font-size: 18px;
-    line-height: 22px;
+    font-size: 16px;
+    line-height: 24px;
     color: var(--color-white);
     text-align: center;
+    text-transform: uppercase;
 
-    transition: 0.1s color;
+    transition: color 0.1s;
 
     &:hover {
       color: var(--color-equator);
 
-      transition: 0.1s color;
+      transition: color 0.1s;
     }
 
     @include mixins.respond-to(mobileOnly) {
@@ -238,6 +264,55 @@
 
       text-align: left;
     }
+  }
+
+  &__socials {
+    display: flex;
+    align-items: center;
+
+    margin: 0 51px 0 0;
+
+    @include mixins.respond-to(mobileOnly) {}
+
+    @include mixins.respond-to(tabletOnly) {}
+
+    @include mixins.respond-to(desktopSOnly) {}
+
+    &-link {
+      margin: 0 18px 0 0;
+
+      @include mixins.respond-to(mobileOnly) {}
+
+      @include mixins.respond-to(tabletOnly) {}
+
+      @include mixins.respond-to(desktopSOnly) {}
+
+      &:last-child {
+        margin: 0;
+      }
+    }
+  }
+
+  &__tel {
+    display: inline-block;
+
+    font-family: var(--font-family-second);
+    font-weight: 400;
+    font-size: 19px;
+    line-height: 30px;
+    color: var(--color-white);
+
+    margin: 0 60px 0 0;
+
+    @include mixins.respond-to(mobileOnly) {}
+
+    @include mixins.respond-to(tabletOnly) {}
+
+    @include mixins.respond-to(desktopSOnly) {}
+  }
+
+  &__main-link {
+    width: 196px;
   }
 
   &__nav-menu--mobile {
@@ -252,7 +327,7 @@
 
       width: 100vw;
       height: calc(100vh);
-      background-color: var(--color-blue-zodiac);
+      background-color: var(--color-mine-shaft);
       overflow: auto;
       -webkit-overflow-scrolling: touch;
       overscroll-behavior-y: contain;
@@ -262,7 +337,7 @@
 
       padding: 23px 5%;
 
-      z-index: 10;
+      z-index: 15;
     }
 
     @include mixins.respond-to(tabletOnly) {
@@ -276,7 +351,7 @@
 
       width: 100vw;
       height: calc(100vh);
-      background-color: var(--color-blue-zodiac);
+      background-color: var(--color-mine-shaft);
       overflow: auto;
       -webkit-overflow-scrolling: touch;
       overscroll-behavior-y: contain;
@@ -286,74 +361,31 @@
 
       padding: 23px 5%;
 
-      z-index: 10;
-    }
-  }
-
-  &__lang {
-    margin: 0 0 0 auto;
-
-    @include mixins.respond-to(mobileOnly) {
-      margin: 0;
+      z-index: 15;
     }
 
-    @include mixins.respond-to(tabletOnly) {
-      margin: 0;
-    }
-  }
+    @include mixins.respond-to(desktopSOnly) {
+      position: absolute;
+      top: -23px;
+      left: 0;
 
-  &__lang-item {
-    position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
 
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 22px;
-    color: #FFFFFF;
-    text-align: center;
+      width: 100vw;
+      height: calc(100vh);
+      background-color: var(--color-mine-shaft);
+      overflow: auto;
+      -webkit-overflow-scrolling: touch;
+      overscroll-behavior-y: contain;
 
-    @include mixins.respond-to(mobileOnly) {
-      font-size: 22px;
-    }
+      transform: translateX(-100%);
+      transition: transform 0.4s cubic-bezier(0.37, 0, 0.63, 1);
 
-    @include mixins.respond-to(tabletOnly) {
-      font-size: 22px;
-    }
+      padding: 23px 5%;
 
-    &--ru {
-      color: var(--color-equator);
-
-      padding: 0 5px 0 0;
-
-      @include mixins.respond-to(mobileOnly) {
-        padding: 0 15px 0 0;
-        margin: 0 10px 0 0;
-      }
-
-      @include mixins.respond-to(tabletOnly) {
-        padding: 0 15px 0 0;
-        margin: 0 10px 0 0;
-      }
-
-      &::after {
-        content: "";
-        position: absolute;
-        top: 0;
-        right: 0;
-
-        width: 2px;
-        height: 100%;
-        background: var(--gradient-main);
-      }
-    }
-
-    &--en {
-      transition: color 0.1s;
-
-      &:hover {
-        color: var(--color-pancho);
-
-        transition: color 0.1s;
-      }
+      z-index: 15;
     }
   }
 
@@ -380,6 +412,10 @@
     }
 
     @include mixins.respond-to(tabletOnly) {
+      display: flex
+    }
+
+    @include mixins.respond-to(desktopSOnly) {
       display: flex
     }
   }
