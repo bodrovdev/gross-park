@@ -33,6 +33,34 @@ nav_list.onclick = function (event) {
   }
 };
 
+// --- Табы на главной странице
+window.addEventListener('load', () => {
+  if (document.querySelector('.index-catalogue__aside-link') === null) {
+    return;
+  }
+  else {
+    let tab_links = document.querySelectorAll('.index-catalogue__aside-link');
+    let tabs = document.querySelectorAll('.index-catalogue__tab');
+
+    tab_links.forEach((link) => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+
+        tab_links.forEach((item) => {
+          item.classList.remove('index-catalogue__aside-link--active');
+        })
+
+        tabs.forEach((value) => {
+          value.classList.remove('index-catalogue__tab--active');
+        })
+
+        link.classList.add('index-catalogue__aside-link--active');
+        document.getElementById(`${link.getAttribute('href').replace('#', '')}`).classList.add('index-catalogue__tab--active');
+      })
+    })
+  }
+})
+
 //Плавный скроллинг до якорных ссылок
 // $('a[href^="#"]').on('click', function (e) {
 //   e.preventDefault();
