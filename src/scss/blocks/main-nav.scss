@@ -95,31 +95,39 @@
 
   z-index: 10;
 
-  @include mixins.respond-to(mobileOnly) {
+  @include mixins.respond-to(notDesktop) {
     margin: 23px 0 0 0;
   }
 
-  @include mixins.respond-to(tabletOnly) {
-    margin: 23px 0 0 0;
-  }
-
-  @include mixins.respond-to(desktopSOnly) {
-    margin: 23px 0 0 0;
+  &__nav-wrapper {
+    position: relative;
   }
 
   &__container {
+    // position: relative;
+
     display: flex;
     align-items: center;
 
-    @include mixins.respond-to(mobileOnly) {
-      justify-content: space-between;
+    padding: 0 0 19px 0;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+
+      width: 100%;
+      height: 1px;
+      background-color: var(--color-white);
+      opacity: 0.3;
+
+      @include mixins.respond-to(mobileOnly) {
+        display: none;
+      }
     }
 
-    @include mixins.respond-to(tabletOnly) {
-      justify-content: space-between;
-    }
-
-    @include mixins.respond-to(desktopSOnly) {
+    @include mixins.respond-to(notDesktop) {
       justify-content: space-between;
     }
   }
@@ -129,15 +137,7 @@
 
     margin: 0 121px 0 0;
 
-    @include mixins.respond-to(mobileOnly) {
-      margin: 0;
-    }
-
-    @include mixins.respond-to(tabletOnly) {
-      margin: 0;
-    }
-
-    @include mixins.respond-to(desktopSOnly) {
+    @include mixins.respond-to(notDesktop) {
       margin: 0;
     }
 
@@ -150,17 +150,9 @@
   &__logo-link--mobile {
     display: none;
 
-    margin: 0 0 50px 0;
+    margin: 0 0 40px 0;
 
-    @include mixins.respond-to(mobileOnly) {
-      display: inline-block;
-    }
-
-    @include mixins.respond-to(tabletOnly) {
-      display: inline-block;
-    }
-
-    @include mixins.respond-to(desktopSOnly) {
+    @include mixins.respond-to(notDesktop) {
       display: inline-block;
     }
   }
@@ -178,31 +170,13 @@
 
     margin: 0 97px 0 0;
 
-    @include mixins.respond-to(mobileOnly) {
+    @include mixins.respond-to(notDesktop) {
       flex-direction: column;
       align-items: flex-start;
 
       width: 100%;
 
-      margin: 0 0 50px 0
-    }
-
-    @include mixins.respond-to(tabletOnly) {
-      flex-direction: column;
-      align-items: flex-start;
-
-      width: 100%;
-
-      margin: 0 0 50px 0
-    }
-
-    @include mixins.respond-to(desktopSOnly) {
-      flex-direction: column;
-      align-items: flex-start;
-
-      width: 100%;
-
-      margin: 0 0 50px 0
+      margin: 0 0 40px 0
     }
   }
 
@@ -213,19 +187,7 @@
       margin: 0;
     }
 
-    @include mixins.respond-to(mobileOnly) {
-      width: 100%;
-
-      margin: 0 0 30px 0;
-    }
-
-    @include mixins.respond-to(tabletOnly) {
-      width: 100%;
-
-      margin: 0 0 30px 0;
-    }
-
-    @include mixins.respond-to(desktopSOnly) {
+    @include mixins.respond-to(notDesktop) {
       width: 100%;
 
       margin: 0 0 30px 0;
@@ -249,19 +211,12 @@
       transition: color 0.1s;
     }
 
-    @include mixins.respond-to(mobileOnly) {
+    @include mixins.respond-to(notDesktop) {
       display: inline-block;
 
       width: 100%;
 
-      text-align: left;
-    }
-
-    @include mixins.respond-to(tabletOnly) {
-      display: inline-block;
-
-      width: 100%;
-
+      font-size: 22px;
       text-align: left;
     }
   }
@@ -272,20 +227,14 @@
 
     margin: 0 51px 0 0;
 
-    @include mixins.respond-to(mobileOnly) {}
-
-    @include mixins.respond-to(tabletOnly) {}
-
-    @include mixins.respond-to(desktopSOnly) {}
+    @include mixins.respond-to(notDesktop) {
+      margin: 0 0 20px 0;
+    }
 
     &-link {
       margin: 0 18px 0 0;
 
-      @include mixins.respond-to(mobileOnly) {}
-
-      @include mixins.respond-to(tabletOnly) {}
-
-      @include mixins.respond-to(desktopSOnly) {}
+      @include mixins.respond-to(notDesktop) {}
 
       &:last-child {
         margin: 0;
@@ -304,67 +253,17 @@
 
     margin: 0 60px 0 0;
 
-    @include mixins.respond-to(mobileOnly) {}
-
-    @include mixins.respond-to(tabletOnly) {}
-
-    @include mixins.respond-to(desktopSOnly) {}
+    @include mixins.respond-to(notDesktop) {
+      margin: 0 0 20px 0;
+    }
   }
 
-  &__main-link {
+  &__main-button {
     width: 196px;
   }
 
   &__nav-menu--mobile {
-    @include mixins.respond-to(mobileOnly) {
-      position: absolute;
-      top: -23px;
-      left: 0;
-
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-
-      width: 100vw;
-      height: calc(100vh);
-      background-color: var(--color-mine-shaft);
-      overflow: auto;
-      -webkit-overflow-scrolling: touch;
-      overscroll-behavior-y: contain;
-
-      transform: translateX(-100%);
-      transition: transform 0.4s cubic-bezier(0.37, 0, 0.63, 1);
-
-      padding: 23px 5%;
-
-      z-index: 15;
-    }
-
-    @include mixins.respond-to(tabletOnly) {
-      position: absolute;
-      top: -23px;
-      left: 0;
-
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-
-      width: 100vw;
-      height: calc(100vh);
-      background-color: var(--color-mine-shaft);
-      overflow: auto;
-      -webkit-overflow-scrolling: touch;
-      overscroll-behavior-y: contain;
-
-      transform: translateX(-100%);
-      transition: transform 0.4s cubic-bezier(0.37, 0, 0.63, 1);
-
-      padding: 23px 5%;
-
-      z-index: 15;
-    }
-
-    @include mixins.respond-to(desktopSOnly) {
+    @include mixins.respond-to(notDesktop) {
       position: absolute;
       top: -23px;
       left: 0;
@@ -407,16 +306,8 @@
 
     z-index: 15;
 
-    @include mixins.respond-to(mobileOnly) {
+    @include mixins.respond-to(notDesktop) {
       display: flex;
-    }
-
-    @include mixins.respond-to(tabletOnly) {
-      display: flex
-    }
-
-    @include mixins.respond-to(desktopSOnly) {
-      display: flex
     }
   }
 

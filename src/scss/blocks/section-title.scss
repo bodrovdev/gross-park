@@ -7,4 +7,9 @@
   line-height: 78px;
   letter-spacing: 1px;
   color: var(--color-mine-shaft);
+
+  @include mixins.respond-to(mobileOnly) {
+    font-size: 30px;
+    line-height: 45px;
+  }
 }
