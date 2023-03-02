@@ -1,5 +1,6 @@
 //Для разработки
 @use 'global/variables';
+@use 'node_modules/swiper/swiper-bundle.min.css';
 
 //Миксины
 @use 'mixins/font-face';
@@ -28,4 +29,5 @@
 @use 'blocks/heading';
 @use 'blocks/main-button';
 @use 'blocks/heading-underline';
-@use 'blocks/features';@use 'blocks/index-catalogue';
+@use 'blocks/features';
+@use 'blocks/index-catalogue';
