@@ -155,7 +155,76 @@
       <div class="index-catalogue__wrapper">
         <div class="index-catalogue__aside">
           <h3 class="index-catalogue__aside-title base-title">Спецтехника</h3>
-          <ul class="index-catalogue__aside-list base-list">
+
+          <div class="index-catalogue__select" id="select">
+            <svg class="index-catalogue__aside-icon" width="32" height="32" alt="#">
+              <use href=""></use>
+            </svg>
+            <span class="index-catalogue__aside-text"></span>
+            <svg class="index-catalogue__select-icon" width="15" height="15" alt="#">
+              <use href="img/icon/sprite.svg#select-arrow"></use>
+            </svg>
+            <ul class="index-catalogue__aside-list index-catalogue__aside-list--select base-list" id="select_list">
+              <li class="index-catalogue__aside-item" id="select_item">
+                <a class="index-catalogue__aside-link index-catalogue__aside-link--active base-link" href="#tab_1">
+                  <svg class="index-catalogue__aside-icon" width="32" height="32" alt="#">
+                    <use href="img/icon/sprite.svg#catalogue-aside-1-icon"></use>
+                  </svg>
+                  <span class="index-catalogue__aside-text">Краны</span>
+                </a>
+              </li>
+              <li class="index-catalogue__aside-item" id="select_item">
+                <a class="index-catalogue__aside-link base-link" href="#tab_2">
+                  <svg class="index-catalogue__aside-icon" width="32" height="32" alt="#">
+                    <use href="img/icon/sprite.svg#catalogue-aside-2-icon"></use>
+                  </svg>
+                  <span class="index-catalogue__aside-text">Вышки</span>
+                </a>
+              </li>
+              <li class="index-catalogue__aside-item" id="select_item">
+                <a class="index-catalogue__aside-link base-link" href="#tab_3">
+                  <svg class="index-catalogue__aside-icon" width="32" height="32" alt="#">
+                    <use href="img/icon/sprite.svg#catalogue-aside-3-icon"></use>
+                  </svg>
+                  <span class="index-catalogue__aside-text">Манипуляторы</span>
+                </a>
+              </li>
+              <li class="index-catalogue__aside-item" id="select_item">
+                <a class="index-catalogue__aside-link base-link" href="#tab_4">
+                  <svg class="index-catalogue__aside-icon" width="32" height="32" alt="#">
+                    <use href="img/icon/sprite.svg#catalogue-aside-4-icon"></use>
+                  </svg>
+                  <span class="index-catalogue__aside-text">Экскаваторы погрузчики</span>
+                </a>
+              </li>
+              <li class="index-catalogue__aside-item" id="select_item">
+                <a class="index-catalogue__aside-link base-link" href="#tab_5">
+                  <svg class="index-catalogue__aside-icon" width="32" height="32" alt="#">
+                    <use href="img/icon/sprite.svg#catalogue-aside-5-icon"></use>
+                  </svg>
+                  <span class="index-catalogue__aside-text">Колесные экскаваторы</span>
+                </a>
+              </li>
+              <li class="index-catalogue__aside-item" id="select_item">
+                <a class="index-catalogue__aside-link base-link" href="#tab_6">
+                  <svg class="index-catalogue__aside-icon" width="32" height="32" alt="#">
+                    <use href="img/icon/sprite.svg#catalogue-aside-6-icon"></use>
+                  </svg>
+                  <span class="index-catalogue__aside-text">Гусеничные экскаваторы</span>
+                </a>
+              </li>
+              <li class="index-catalogue__aside-item">
+                <a class="index-catalogue__aside-link base-link" href="#tab_7">
+                  <svg class="index-catalogue__aside-icon" width="32" height="32" alt="#">
+                    <use href="img/icon/sprite.svg#catalogue-aside-7-icon"></use>
+                  </svg>
+                  <span class="index-catalogue__aside-text">Мини погрузчики</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <ul class="index-catalogue__aside-list index-catalogue__aside-list--main base-list">
             <li class="index-catalogue__aside-item">
               <a class="index-catalogue__aside-link index-catalogue__aside-link--active base-link" href="#tab_1">
                 <svg class="index-catalogue__aside-icon" width="32" height="32" alt="#">
@@ -453,8 +522,7 @@
                   </div>
                 </div>
               </div>
-              <div class="index-catalogue__mobile-arrows"></div>
-              <div class="index-catalogue__mobile-pagination"></div>
+              <div class="index-catalogue__slider-pagination swiper-pagination"></div>
             </div>
           </div>
           <div class="index-catalogue__tab index-catalogue__tab--2" id="tab_2">2</div>
