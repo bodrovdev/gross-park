@@ -61,6 +61,27 @@ window.addEventListener('load', () => {
   }
 })
 
+//Селект в мобильной версии на главной странице
+window.addEventListener('load', () => {
+  if (document.getElementById('select') === null) {
+    return;
+  }
+  else {
+    const select = document.getElementById('select');
+    const select_list = document.getElementById('select_list');
+    const select_items = document.querySelectorAll('#select_item');
+
+    select.addEventListener('click', () => {
+      select_list.classList.toggle('index-catalogue__aside-list--select--active');
+    })
+
+    select_list.addEventListener('click', (e) => {
+      let target = e.target;
+      console.log(target.children);
+    })
+  }
+})
+
 //Плавный скроллинг до якорных ссылок
 // $('a[href^="#"]').on('click', function (e) {
 //   e.preventDefault();

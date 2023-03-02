@@ -15,10 +15,10 @@ function catalogueSlider() {
         //   nextEl: '.inside__slider-arrow--next',
         //   prevEl: '.inside__slider-arrow--prev',
         // },
-        // pagination: {
-        //   el: ".inside__slider-pagination",
-        //   clickable: true,
-        // },
+        pagination: {
+          el: ".index-catalogue__slider-pagination",
+          clickable: true,
+        },
       });
     }
   } else if (init) {

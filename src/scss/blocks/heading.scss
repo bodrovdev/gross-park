@@ -105,5 +105,9 @@
 
   &__main-button {
     width: 339px;
+
+    @include mixins.respond-to(mobileOnly) {
+      width: 100%;
+    }
   }
 }
