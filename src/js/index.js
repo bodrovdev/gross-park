@@ -69,7 +69,6 @@ window.addEventListener('load', () => {
   else {
     const select = document.getElementById('select');
     const select_list = document.getElementById('select_list');
-    // const select_items = document.querySelectorAll('#select_item');
     const select_icon = document.getElementById('select_icon');
 
     select.children[0].children[0].setAttribute('href', document.querySelector('#select_item').children[0].children[0].children[0].getAttribute('href'));
