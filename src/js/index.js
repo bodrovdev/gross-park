@@ -69,15 +69,21 @@ window.addEventListener('load', () => {
   else {
     const select = document.getElementById('select');
     const select_list = document.getElementById('select_list');
-    const select_items = document.querySelectorAll('#select_item');
+    // const select_items = document.querySelectorAll('#select_item');
+    const select_icon = document.getElementById('select_icon');
+
+    select.children[0].children[0].setAttribute('href', document.querySelector('#select_item').children[0].children[0].children[0].getAttribute('href'));
+    select.children[1].textContent = document.querySelector('#select_item').children[0].children[1].textContent;
 
     select.addEventListener('click', () => {
       select_list.classList.toggle('index-catalogue__aside-list--select--active');
+      select_icon.classList.toggle('index-catalogue__select-icon--active');
     })
 
     select_list.addEventListener('click', (e) => {
       let target = e.target;
-      console.log(target.children);
+      select.children[0].children[0].setAttribute('href', target.children[0].children[0].getAttribute('href'))
+      select.children[1].textContent = target.children[1].textContent;
     })
   }
 })

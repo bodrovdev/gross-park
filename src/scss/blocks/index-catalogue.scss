@@ -190,6 +190,23 @@
       top: 50%;
       right: 5%;
       transform: translateY(-50%);
+
+      transition: transform 0.1s;
+
+      &--active {
+        transform: translateY(-50%) rotate(180deg);
+        transition: transform 0.1s;
+      }
+    }
+
+    & .index-catalogue__aside-icon {
+      user-select: none;
+      pointer-events: none;
+    }
+
+    & .index-catalogue__aside-text {
+      user-select: none;
+      pointer-events: none;
     }
 
     & .index-catalogue__aside-list--select {
