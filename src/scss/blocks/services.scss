@@ -164,6 +164,8 @@
     }
 
     &-info {
+      transform: translateZ(60px);
+
       & span {
         font-family: var(--font-family-second);
         font-weight: 700;

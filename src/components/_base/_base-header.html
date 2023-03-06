@@ -79,3 +79,46 @@
       </div>
     </nav>
   </header>
+
+  <div class="modal-success" id="modal_success">
+    <div class="modal-success__wrapper">
+      <button class="modal-success__close base-button" id="modal_success_close">
+        <svg class="modal-success__close-icon" width="20" height="20" alt="#">
+          <use href="img/icon/sprite.svg#modal-success-close-icon"></use>
+        </svg>
+      </button>
+      <div class="modal-success__inner">
+        <span class="modal-success__text">Спасибо, ваша заявка отправлена</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-form" id="modal_form">
+    <div class="modal-form__wrapper">
+      <button class="modal-form__close base-button" id="modal_form_close">
+        <svg class="modal-form__close-icon" width="20" height="20" alt="#">
+          <use href="img/icon/sprite.svg#modal-form-close-icon"></use>
+        </svg>
+      </button>
+      <div class="modal-form__inner">
+        <h2 class="modal-form__title section-title base-title">Аренда спецтехники</h2>
+
+        <div class="modal-form__order">
+          <span class="modal-form__category-name" id="modal_form_category">Гусеничный экскаватор</span>:
+          <span class="modal-form__item-name" id="modal_form_item">Сталин 3000</span>
+        </div>
+
+        <form class="modal-form__form">
+          <input class="modal-form__input modal-form__input--name" type="text" placeholder="Имя" required>
+          <input class="modal-form__input modal-form__input--tel" type="tel" placeholder="Телефон" required>
+          <input class="modal-form__input modal-form__input--check visually-hidden" type="checkbox" required tabindex="-1">
+          <div class="modal-form__check">
+            <span class="modal-form__check-fake"></span>
+            <span class="modal-form__check-text">Я согласен(на) с <a class="modal-form__check-link base-link" href="#">обработкой персональных данных</a></span>
+          </div>
+          <button class="modal-form__submit main-button base-button" type="submit">Связаться с нами</button>
+        </form>
+
+      </div>
+    </div>
+  </div>
