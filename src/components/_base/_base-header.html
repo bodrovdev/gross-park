@@ -93,30 +93,33 @@
     </div>
   </div>
 
-  <div class="modal-form" id="modal_form">
-    <div class="modal-form__wrapper">
-      <button class="modal-form__close base-button" id="modal_form_close">
-        <svg class="modal-form__close-icon" width="20" height="20" alt="#">
-          <use href="img/icon/sprite.svg#modal-form-close-icon"></use>
+  <div class="modal-order" id="modal_order">
+    <div class="modal-order__wrapper">
+      <button class="modal-order__close base-button" id="modal_form_close">
+        <svg class="modal-order__close-icon" width="20" height="20" alt="#">
+          <use href="img/icon/sprite.svg#modal-order-close-icon"></use>
         </svg>
       </button>
-      <div class="modal-form__inner">
-        <h2 class="modal-form__title section-title base-title">Аренда спецтехники</h2>
+      <div class="modal-order__inner">
+        <h2 class="modal-order__title section-title base-title">Аренда спецтехники</h2>
 
-        <div class="modal-form__order">
-          <span class="modal-form__category-name" id="modal_form_category">Гусеничный экскаватор</span>:
-          <span class="modal-form__item-name" id="modal_form_item">Сталин 3000</span>
+        <div class="modal-order__order">
+          <span class="modal-order__category-name" id="modal_order_category"></span>:
+          <span class="modal-order__item-name" id="modal_order_item"></span>
         </div>
 
-        <form class="modal-form__form">
-          <input class="modal-form__input modal-form__input--name" type="text" placeholder="Имя" required>
-          <input class="modal-form__input modal-form__input--tel" type="tel" placeholder="Телефон" required>
-          <input class="modal-form__input modal-form__input--check visually-hidden" type="checkbox" required tabindex="-1">
-          <div class="modal-form__check">
-            <span class="modal-form__check-fake"></span>
-            <span class="modal-form__check-text">Я согласен(на) с <a class="modal-form__check-link base-link" href="#">обработкой персональных данных</a></span>
+        <form class="modal-order__form" id="modal_order_form">
+          <input class="modal-order__input modal-order__input--name" type="text" placeholder="Имя" required>
+          <input class="modal-order__input modal-order__input--tel" type="tel" placeholder="Телефон" required>
+          <input class="modal-order__input modal-order__input--check visually-hidden" type="checkbox" required tabindex="-1">
+          <div class="modal-order__check">
+            <span class="modal-order__check-fake"></span>
+            <span class="modal-order__check-text">Я согласен(на) с <a class="modal-order__check-link base-link" href="#">обработкой персональных данных</a></span>
           </div>
-          <button class="modal-form__submit main-button base-button" type="submit">Связаться с нами</button>
+          <input class="modal-order__input modal-order__input--category visually-hidden" type="text" tabindex="-1">
+          <input class="modal-order__input modal-order__input--item visually-hidden" type="text" tabindex="-1">
+
+          <button class="modal-order__submit main-button base-button" type="submit">Связаться с нами</button>
         </form>
 
       </div>

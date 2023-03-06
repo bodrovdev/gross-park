@@ -121,37 +121,25 @@ window.addEventListener('load', () => {
 })
 
 // --- Модальное окно с заказом товара
-// window.addEventListener('load', () => {
-//   if (document.getElementById('main_form') === null) {
-//     return;
-//   }
-//   else {
-//     let main_form = document.getElementById('main_form');
-//     let modal_success = document.getElementById('modal_success');
-//     let modal_success_close = document.getElementById('modal_success_close');
+window.addEventListener('load', () => {
+  if (document.querySelectorAll('.index-catalogue__main-button') === null) {
+    return;
+  }
+  else {
+    const order_buttons = document.querySelectorAll('.index-catalogue__main-button');
+    const modal_order = document.getElementById('modal_order');
+    const modal_order_close = document.getElementById('modal_order_close');
+    const modal_order_form = document.getElementById('modal_order_form');
 
-//     main_form.addEventListener('submit', (e) => {
-//       e.preventDefault();
-//       modal_success.classList.add('modal-success--active');
-//       disableBodyScroll(modal_success);
-//     })
+    order_buttons.forEach((button) => {
+      button.addEventListener('click', (e) => {
+        modal_order.classList.add('modal-order--active');
+        // console.log(button.closest('.index-catalogue__item').dataset.category);
+      })
+    })
 
-//     modal_success_close.addEventListener('click', () => {
-//       modal_success.classList.remove('modal-success--active');
-//       enableBodyScroll(modal_success);
-//     })
-
-//     modal_success.addEventListener('click', (e) => {
-//       if (e.target !== e.currentTarget) {
-//         return;
-//       }
-//       else {
-//         modal_success.classList.remove('modal-success--active');
-//         enableBodyScroll(modal_success);
-//       }
-//     })
-//   }
-// })
+  }
+})
 
 //Плавный скроллинг до якорных ссылок
 // $('a[href^="#"]').on('click', function (e) {
