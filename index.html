@@ -80,6 +80,49 @@
     </nav>
   </header>
 
+  <div class="modal-success" id="modal_success">
+    <div class="modal-success__wrapper">
+      <button class="modal-success__close base-button" id="modal_success_close">
+        <svg class="modal-success__close-icon" width="20" height="20" alt="#">
+          <use href="img/icon/sprite.svg#modal-success-close-icon"></use>
+        </svg>
+      </button>
+      <div class="modal-success__inner">
+        <span class="modal-success__text">Спасибо, ваша заявка отправлена</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-form" id="modal_form">
+    <div class="modal-form__wrapper">
+      <button class="modal-form__close base-button" id="modal_form_close">
+        <svg class="modal-form__close-icon" width="20" height="20" alt="#">
+          <use href="img/icon/sprite.svg#modal-form-close-icon"></use>
+        </svg>
+      </button>
+      <div class="modal-form__inner">
+        <h2 class="modal-form__title section-title base-title">Аренда спецтехники</h2>
+
+        <div class="modal-form__order">
+          <span class="modal-form__category-name" id="modal_form_category">Гусеничный экскаватор</span>:
+          <span class="modal-form__item-name" id="modal_form_item">Сталин 3000</span>
+        </div>
+
+        <form class="modal-form__form">
+          <input class="modal-form__input modal-form__input--name" type="text" placeholder="Имя" required>
+          <input class="modal-form__input modal-form__input--tel" type="tel" placeholder="Телефон" required>
+          <input class="modal-form__input modal-form__input--check visually-hidden" type="checkbox" required tabindex="-1">
+          <div class="modal-form__check">
+            <span class="modal-form__check-fake"></span>
+            <span class="modal-form__check-text">Я согласен(на) с <a class="modal-form__check-link base-link" href="#">обработкой персональных данных</a></span>
+          </div>
+          <button class="modal-form__submit main-button base-button" type="submit">Связаться с нами</button>
+        </form>
+
+      </div>
+    </div>
+  </div>
+
 <main class="page-content">
 
   <section class="heading" style="background: url('img/image/heading-cover-2.png');background-size: cover;background-position: center;">
@@ -287,7 +330,7 @@
           <div class="index-catalogue__tab index-catalogue__tab--1 index-catalogue__tab--active" id="tab_1">
             <div class="index-catalogue__mobile-slider swiper">
               <div class="index-catalogue__mobile-wrapper swiper-wrapper">
-                <div class="index-catalogue__item swiper-slide">
+                <div class="index-catalogue__item swiper-slide" id="catalogue_item" data-category="Краны" data-name="JCB 3CX Super">
                   <div class="index-catalogue__item-content">
                     <figure class="index-catalogue__item-image base-figure">
                       <img class="index-catalogue__item-img" src="img/image/catalogue-item-1.png" width="306" height="169" alt="#">
@@ -326,7 +369,7 @@
                     <button class="index-catalogue__main-button main-button base-button" type="button">Заказать в один клик</button>
                   </div>
                 </div>
-                <div class="index-catalogue__item swiper-slide">
+                <div class="index-catalogue__item swiper-slide" id="catalogue_item" data-category="Краны" data-name="JCB 3CX Super">
                   <div class="index-catalogue__item-content">
                     <figure class="index-catalogue__item-image base-figure">
                       <img class="index-catalogue__item-img" src="img/image/catalogue-item-1.png" width="306" height="169" alt="#">
@@ -365,7 +408,7 @@
                     <button class="index-catalogue__main-button main-button base-button" type="button">Заказать в один клик</button>
                   </div>
                 </div>
-                <div class="index-catalogue__item swiper-slide">
+                <div class="index-catalogue__item swiper-slide" id="catalogue_item" data-category="Краны" data-name="JCB 3CX Super">
                   <div class="index-catalogue__item-content">
                     <figure class="index-catalogue__item-image base-figure">
                       <img class="index-catalogue__item-img" src="img/image/catalogue-item-1.png" width="306" height="169" alt="#">
@@ -404,7 +447,7 @@
                     <button class="index-catalogue__main-button main-button base-button" type="button">Заказать в один клик</button>
                   </div>
                 </div>
-                <div class="index-catalogue__item swiper-slide">
+                <div class="index-catalogue__item swiper-slide" id="catalogue_item" data-category="Краны" data-name="JCB 3CX Super">
                   <div class="index-catalogue__item-content">
                     <figure class="index-catalogue__item-image base-figure">
                       <img class="index-catalogue__item-img" src="img/image/catalogue-item-1.png" width="306" height="169" alt="#">
@@ -443,7 +486,7 @@
                     <button class="index-catalogue__main-button main-button base-button" type="button">Заказать в один клик</button>
                   </div>
                 </div>
-                <div class="index-catalogue__item swiper-slide">
+                <div class="index-catalogue__item swiper-slide" id="catalogue_item" data-category="Краны" data-name="JCB 3CX Super">
                   <div class="index-catalogue__item-content">
                     <figure class="index-catalogue__item-image base-figure">
                       <img class="index-catalogue__item-img" src="img/image/catalogue-item-1.png" width="306" height="169" alt="#">
@@ -482,7 +525,7 @@
                     <button class="index-catalogue__main-button main-button base-button" type="button">Заказать в один клик</button>
                   </div>
                 </div>
-                <div class="index-catalogue__item swiper-slide">
+                <div class="index-catalogue__item swiper-slide" id="catalogue_item" data-category="Краны" data-name="JCB 3CX Super">
                   <div class="index-catalogue__item-content">
                     <figure class="index-catalogue__item-image base-figure">
                       <img class="index-catalogue__item-img" src="img/image/catalogue-item-1.png" width="306" height="169" alt="#">
@@ -727,6 +770,20 @@
 
   <section class="footer-main">
     <div class="footer-main__container base-container">
+      <a class="footer-main__logo-link base-link" href="index.html">
+        <svg class="footer-main__logo-icon" width="138" height="61" alt="#">
+          <use href="img/icon/sprite.svg#logo-icon"></use>
+        </svg>
+      </a>
+      <span class="footer-main__address">145690, город Орехово-Зуево, Карболитный пр., 8, этаж 3, офис 307</span>
+      <span class="footer-main__copyright">© АО «Аукцион» 2009—2023</span>
+      <a class="footer-main__policy base-link" href="#">Политика конфиденциальности</a>
+      <a class="footer-main__isart base-link" targe="_blank" rel="noreferrer" href="https://is-art.ru/">
+        <span class="footer-main__isart-text">Разработано</span>
+        <svg class="footer-main__isart-icon" width="52" height="22" alt="#">
+          <use href="img/icon/sprite.svg#isart-logo-icon"></use>
+        </svg>
+      </a>
     </div>
   </section>
 </footer>
