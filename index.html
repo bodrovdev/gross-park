@@ -95,7 +95,7 @@
 
   <div class="modal-order" id="modal_order">
     <div class="modal-order__wrapper">
-      <button class="modal-order__close base-button" id="modal_form_close">
+      <button class="modal-order__close base-button" id="modal_order_close">
         <svg class="modal-order__close-icon" width="20" height="20" alt="#">
           <use href="img/icon/sprite.svg#modal-order-close-icon"></use>
         </svg>
@@ -104,24 +104,26 @@
         <h2 class="modal-order__title section-title base-title">Аренда спецтехники</h2>
 
         <div class="modal-order__order">
-          <span class="modal-order__category-name" id="modal_order_category"></span>:
-          <span class="modal-order__item-name" id="modal_order_item"></span>
+          <span class="modal-order__order-category" id="modal_order_category">Категория</span>:
+          <span class="modal-order__order-name" id="modal_order_item">Название</span>
         </div>
 
         <form class="modal-order__form" id="modal_order_form">
-          <input class="modal-order__input modal-order__input--name" type="text" placeholder="Имя" required>
-          <input class="modal-order__input modal-order__input--tel" type="tel" placeholder="Телефон" required>
-          <input class="modal-order__input modal-order__input--check visually-hidden" type="checkbox" required tabindex="-1">
-          <div class="modal-order__check">
-            <span class="modal-order__check-fake"></span>
+          <input class="modal-order__input modal-order__input--name" type="text" name="modal_order_name" placeholder="Имя" required>
+          <input class="modal-order__input modal-order__input--phone" type="tel" name="modal_order_phone" placeholder="Телефон" required>
+          <label class="modal-order__check">
+            <input class="modal-order__input modal-order__input--check visually-hidden" type="checkbox" checked required tabindex="-1">
             <span class="modal-order__check-text">Я согласен(на) с <a class="modal-order__check-link base-link" href="#">обработкой персональных данных</a></span>
-          </div>
-          <input class="modal-order__input modal-order__input--category visually-hidden" type="text" tabindex="-1">
-          <input class="modal-order__input modal-order__input--item visually-hidden" type="text" tabindex="-1">
+          </label>
+          <input class="modal-order__input modal-order__input--category visually-hidden" name="modal_order_category" id="modal_order_category_input" type="text" tabindex="-1">
+          <input class="modal-order__input modal-order__input--item visually-hidden" name="modal_order_item" id="modal_order_item_input" type="text" tabindex="-1">
 
           <button class="modal-order__submit main-button base-button" type="submit">Связаться с нами</button>
         </form>
 
+      </div>
+      <div class="modal-order__success">
+        <span class="modal-order__success-text">Спасибо, ваша заявка отправлена</span>
       </div>
     </div>
   </div>
@@ -333,7 +335,7 @@
           <div class="index-catalogue__tab index-catalogue__tab--1 index-catalogue__tab--active" id="tab_1">
             <div class="index-catalogue__mobile-slider swiper">
               <div class="index-catalogue__mobile-wrapper swiper-wrapper">
-                <div class="index-catalogue__item swiper-slide" data-category="Краны" data-name="JCB 3CX Super">
+                <div class="index-catalogue__item swiper-slide" id="order_item" data-category="Краны" data-name="JCB 3CX Super 1">
                   <div class="index-catalogue__item-content">
                     <figure class="index-catalogue__item-image base-figure">
                       <img class="index-catalogue__item-img" src="img/image/catalogue-item-1.png" width="306" height="169" alt="#">
@@ -369,10 +371,10 @@
                         </div>
                       </div>
                     </div>
-                    <button class="index-catalogue__main-button main-button base-button" type="button">Заказать в один клик</button>
+                    <button class="index-catalogue__main-button main-button base-button" type="button" id="order_modal_button">Заказать в один клик</button>
                   </div>
                 </div>
-                <div class="index-catalogue__item swiper-slide" data-category="Краны" data-name="JCB 3CX Super">
+                <div class="index-catalogue__item swiper-slide" id="order_item" data-category="Краны" data-name="JCB 3CX Super 2">
                   <div class="index-catalogue__item-content">
                     <figure class="index-catalogue__item-image base-figure">
                       <img class="index-catalogue__item-img" src="img/image/catalogue-item-1.png" width="306" height="169" alt="#">
@@ -408,10 +410,10 @@
                         </div>
                       </div>
                     </div>
-                    <button class="index-catalogue__main-button main-button base-button" type="button">Заказать в один клик</button>
+                    <button class="index-catalogue__main-button main-button base-button" type="button" id="order_modal_button">Заказать в один клик</button>
                   </div>
                 </div>
-                <div class="index-catalogue__item swiper-slide" data-category="Краны" data-name="JCB 3CX Super">
+                <div class="index-catalogue__item swiper-slide" id="order_item" data-category="Краны" data-name="JCB 3CX Super 3">
                   <div class="index-catalogue__item-content">
                     <figure class="index-catalogue__item-image base-figure">
                       <img class="index-catalogue__item-img" src="img/image/catalogue-item-1.png" width="306" height="169" alt="#">
@@ -447,10 +449,10 @@
                         </div>
                       </div>
                     </div>
-                    <button class="index-catalogue__main-button main-button base-button" type="button">Заказать в один клик</button>
+                    <button class="index-catalogue__main-button main-button base-button" type="button" id="order_modal_button">Заказать в один клик</button>
                   </div>
                 </div>
-                <div class="index-catalogue__item swiper-slide" data-category="Краны" data-name="JCB 3CX Super">
+                <div class="index-catalogue__item swiper-slide" id="order_item" data-category="Краны" data-name="JCB 3CX Super 4">
                   <div class="index-catalogue__item-content">
                     <figure class="index-catalogue__item-image base-figure">
                       <img class="index-catalogue__item-img" src="img/image/catalogue-item-1.png" width="306" height="169" alt="#">
@@ -486,10 +488,10 @@
                         </div>
                       </div>
                     </div>
-                    <button class="index-catalogue__main-button main-button base-button" type="button">Заказать в один клик</button>
+                    <button class="index-catalogue__main-button main-button base-button" type="button" id="order_modal_button">Заказать в один клик</button>
                   </div>
                 </div>
-                <div class="index-catalogue__item swiper-slide" data-category="Краны" data-name="JCB 3CX Super">
+                <div class="index-catalogue__item swiper-slide" id="order_item" data-category="Краны" data-name="JCB 3CX Super 5">
                   <div class="index-catalogue__item-content">
                     <figure class="index-catalogue__item-image base-figure">
                       <img class="index-catalogue__item-img" src="img/image/catalogue-item-1.png" width="306" height="169" alt="#">
@@ -525,10 +527,10 @@
                         </div>
                       </div>
                     </div>
-                    <button class="index-catalogue__main-button main-button base-button" type="button">Заказать в один клик</button>
+                    <button class="index-catalogue__main-button main-button base-button" type="button" id="order_modal_button">Заказать в один клик</button>
                   </div>
                 </div>
-                <div class="index-catalogue__item swiper-slide" data-category="Краны" data-name="JCB 3CX Super">
+                <div class="index-catalogue__item swiper-slide" id="order_item" data-category="Краны" data-name="JCB 3CX Super 6">
                   <div class="index-catalogue__item-content">
                     <figure class="index-catalogue__item-image base-figure">
                       <img class="index-catalogue__item-img" src="img/image/catalogue-item-1.png" width="306" height="169" alt="#">
@@ -564,7 +566,7 @@
                         </div>
                       </div>
                     </div>
-                    <button class="index-catalogue__main-button main-button base-button" type="button">Заказать в один клик</button>
+                    <button class="index-catalogue__main-button main-button base-button" type="button" id="order_modal_button">Заказать в один клик</button>
                   </div>
                 </div>
               </div>
@@ -584,28 +586,28 @@
   </section>
 
   <section class="special">
-    <div class="special__container base-container">
-      <div class="special__wrapper">
-        <div class="special__inner">
-          <h2 class="special__title base-title">СПЕЦПРЕДЛОЖЕНИЕ</h2>
-          <div class="special__content">
-            <div class="special__content-item">
-              <h3 class="special__content-title base-title">Скидка от 2000 рублей</h3>
-              <p class="special__content-text base-par">при заказе длинномера и автокрана</p>
-            </div>
-            <div class="special__content-item">
-              <h3 class="special__content-title base-title">ВЕРНЕМ CASHBACK ДО 10%</h3>
-              <p class="special__content-text base-par">при заказе спецтехники на длительный срок</p>
-            </div>
+  <div class="special__container base-container">
+    <div class="special__wrapper">
+      <div class="special__inner">
+        <h2 class="special__title base-title">СПЕЦПРЕДЛОЖЕНИЕ</h2>
+        <div class="special__content">
+          <div class="special__content-item">
+            <h3 class="special__content-title base-title">Скидка от 2000 рублей</h3>
+            <p class="special__content-text base-par">при заказе длинномера и автокрана</p>
           </div>
-          <!-- <a class="special__main-button main-button base-link" href="#">Условия акции</a> -->
+          <div class="special__content-item">
+            <h3 class="special__content-title base-title">ВЕРНЕМ CASHBACK ДО 10%</h3>
+            <p class="special__content-text base-par">при заказе спецтехники на длительный срок</p>
+          </div>
         </div>
-        <figure class="special__image base-figure">
-          <img class="special__img" src="img/image/special-image.png" width="627" height="530" alt="#">
-        </figure>
+        <a class="special__main-button special__main-button--active main-button base-link" href="#">Условия акции</a>
       </div>
+      <figure class="special__image base-figure">
+        <img class="special__img" src="img/image/special-image.png" width="627" height="530" alt="#">
+      </figure>
     </div>
-  </section>
+  </div>
+</section>
 
   <section class="services">
     <div class="services__container base-container">
