@@ -265,7 +265,7 @@
   &__nav-menu--mobile {
     @include mixins.respond-to(notDesktop) {
       position: absolute;
-      top: -23px;
+      top: -24px;
       left: 0;
 
       display: flex;

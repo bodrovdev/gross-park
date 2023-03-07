@@ -1,0 +1,67 @@
+@use "../mixins";
+
+.second-header {
+  margin: 0 0 108px 0;
+}
+
+.second-nav {
+  background-color: var(--color-white);
+
+  padding: 24px 0 0 0;
+  margin: 0;
+
+  & .main-nav__nav-wrapper {
+    background-color: var(--color-white);
+  }
+
+  & .main-nav__burger-line {
+    background-color: var(--color-mine-shaft);
+
+    transition: background-color 0.1s;
+  }
+
+  & .main-nav__burger-line::before {
+    background-color: var(--color-mine-shaft);
+
+    transition: background-color 0.1s;
+  }
+
+  & .main-nav__burger-line::after {
+    background-color: var(--color-mine-shaft);
+
+    transition: background-color 0.1s;
+  }
+
+  & .main-nav__burger--active .main-nav__burger-line {
+    background-color: transparent;
+
+    transition-delay: 0.4s;
+    transition: background-color 0.1s
+  }
+
+  & .main-nav__burger--active .main-nav__burger-line::before {
+    background-color: var(--color-white);
+
+    transition: background-color 0.1s;
+  }
+
+  & .main-nav__burger--active .main-nav__burger-line::after {
+    background-color: var(--color-white);
+
+    transition: background-color 0.1s;
+  }
+
+  @include mixins.respond-to(desktopD) {
+    &__nav-link {
+      color: var(--color-mine-shaft);
+    }
+
+    &__socials-icon {
+      filter: brightness(0) saturate(100%) invert(14%) sepia(0%) saturate(0%) hue-rotate(184deg) brightness(96%) contrast(85%);
+    }
+
+    &__tel {
+      color: var(--color-mine-shaft);
+    }
+  }
+}

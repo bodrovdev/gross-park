@@ -1,0 +1,15 @@
+@use "../mixins";
+
+.turnback {
+  display: inline-block;
+
+  width: 100%;
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    height: 100%;
+  }
+}

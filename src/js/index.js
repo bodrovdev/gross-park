@@ -61,7 +61,7 @@ window.addEventListener('load', () => {
   }
 })
 
-//Селект в мобильной версии на главной странице
+// --- Селект в мобильной версии на главной странице
 window.addEventListener('load', () => {
   if (document.getElementById('select') === null) {
     return;
@@ -122,20 +122,55 @@ window.addEventListener('load', () => {
 
 // --- Модальное окно с заказом товара
 window.addEventListener('load', () => {
-  if (document.querySelectorAll('.index-catalogue__main-button') === null) {
+  if (document.querySelectorAll('#order_modal_button') === null) {
     return;
   }
   else {
-    const order_buttons = document.querySelectorAll('.index-catalogue__main-button');
-    const modal_order = document.getElementById('modal_order');
-    const modal_order_close = document.getElementById('modal_order_close');
-    const modal_order_form = document.getElementById('modal_order_form');
+    let order_buttons = document.querySelectorAll('#order_modal_button');
+    let modal_order = document.getElementById('modal_order');
+    let modal_order_close = document.getElementById('modal_order_close');
+
+    let modal_order_form = document.getElementById('modal_order_form');
+    let modal_order_category = document.getElementById('modal_order_category');
+    let modal_order_category_input = document.getElementById('modal_order_category_input');
+    let modal_order_item = document.getElementById('modal_order_item');
+    let modal_order_item_input = document.getElementById('modal_order_item_input');
 
     order_buttons.forEach((button) => {
       button.addEventListener('click', (e) => {
         modal_order.classList.add('modal-order--active');
-        // console.log(button.closest('.index-catalogue__item').dataset.category);
+        disableBodyScroll(modal_order);
+
+        modal_order_category.textContent = button.closest('#order_item').dataset.category;
+        modal_order_category_input.value = button.closest('#order_item').dataset.category;
+
+        modal_order_item.textContent = button.closest('#order_item').dataset.name;
+        modal_order_item_input.value = button.closest('#order_item').dataset.name;
+
+        console.log(modal_order_category_input.value);
+        console.log(modal_order_item_input.value);
       })
+    })
+
+    modal_order_close.addEventListener('click', () => {
+      modal_order.classList.remove('modal-order--active');
+      enableBodyScroll(modal_order);
+    })
+
+    modal_order.addEventListener('click', (e) => {
+      if (e.target !== e.currentTarget) {
+        return;
+      }
+      else {
+        modal_order.classList.remove('modal-order--active');
+        enableBodyScroll(modal_order);
+      }
+    })
+
+    modal_order_form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      document.querySelector('.modal-order__inner').classList.add('modal-order__inner--hidden');
+      document.querySelector('.modal-order__success').classList.add('modal-order__success--active');
     })
 
   }

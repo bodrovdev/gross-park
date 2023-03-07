@@ -135,14 +135,27 @@
     }
   }
 
-  // &__main-button {
-  //   width: 204px;
-  //   background-color: var(--color-white);
-  //   border: 1px solid var(--color-mine-shaft);
+  &__main-button {
+    width: 204px;
+    background-color: var(--color-white);
+    border: 1px solid var(--color-mine-shaft);
 
-  //   font-weight: 400;
-  //   font-size: 16px;
-  // }
+    font-weight: 400;
+    font-size: 16px;
+    text-align: center;
+
+    @include mixins.respond-to(mobileOnly) {
+      width: 100%;
+    }
+
+    &--active {
+      display: inline-block;
+    }
+
+    &--hidden {
+      display: none;
+    }
+  }
 
   &__image {
     position: absolute;
