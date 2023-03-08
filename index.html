@@ -37,16 +37,16 @@
 
             <ul class="main-nav__nav-list base-list">
               <li class="main-nav__nav-item">
-                <a class="main-nav__nav-link base-link" href="#">Каталог</a>
+                <a class="main-nav__nav-link base-link" href="archive.html">Каталог</a>
               </li>
               <li class="main-nav__nav-item">
-                <a class="main-nav__nav-link base-link" href="#">Услуги</a>
+                <a class="main-nav__nav-link base-link" href="archive.html">Услуги</a>
               </li>
               <li class="main-nav__nav-item">
-                <a class="main-nav__nav-link base-link" href="#">О компании</a>
+                <a class="main-nav__nav-link base-link" href="#about">О компании</a>
               </li>
               <li class="main-nav__nav-item">
-                <a class="main-nav__nav-link base-link" href="#">Контакты</a>
+                <a class="main-nav__nav-link base-link" href="#contacts">Контакты</a>
               </li>
             </ul>
 
@@ -132,7 +132,7 @@
 
   <section class="heading" style="background: url('img/image/heading-cover-2.png');background-size: cover;background-position: center;">
     <div class="heading__container base-container">
-      <div class="heading__info">
+      <div class="heading__info" data-aos="fade-down" data-aos-duration="1500">
         <h1 class="heading__info-title base-title">Аренда спецтехники для любых задач</h1>
         <ul class="heading__info-list base-list">
           <li class="heading__list-item">Работаем для строительных компаний</li>
@@ -213,7 +213,7 @@
               <use href="img/icon/sprite.svg#select-arrow"></use>
             </svg>
             <ul class="index-catalogue__aside-list index-catalogue__aside-list--select base-list" id="select_list">
-              <li class="index-catalogue__aside-item" id="select_item">
+              <li class="index-catalogue__aside-item index-catalogue__aside-item--hidden" id="select_item">
                 <a class="index-catalogue__aside-link index-catalogue__aside-link--active base-link" href="#tab_1">
                   <svg class="index-catalogue__aside-icon" width="32" height="32" alt="#">
                     <use href="img/icon/sprite.svg#catalogue-aside-1-icon"></use>
@@ -602,7 +602,7 @@
         </div>
         <a class="special__main-button special__main-button--active main-button base-link" href="#">Условия акции</a>
       </div>
-      <figure class="special__image base-figure">
+      <figure class="special__image base-figure" data-aos="fade-left" data-aos-duration="2000">
         <img class="special__img" src="img/image/special-image.png" width="627" height="530" alt="#">
       </figure>
     </div>
@@ -702,7 +702,7 @@
     </div>
   </section>
 
-  <section class="about">
+  <section class="about" id="about">
   <div class="about__container base-container">
     <div class="about__aside">
       <h2 class="about__title section-title base-title">«ГРОСС ПАРК» предоставляет строительные услуги</h2>
@@ -717,10 +717,10 @@
   </div>
 </section>
 
-  <section class="feedback" style="background: url('img/image/feedback-cover.png') no-repeat; background-size: cover;">
+  <section class="feedback" style="background: url('img/image/feedback-cover.png') no-repeat; background-size: cover;" id="contacts">
   <div class="feedback__container base-container">
 
-    <div class="feedback__column feedback__column--left">
+    <div class="feedback__column feedback__column--left" data-aos="fade-up" data-aos-duration="2000">
       <h2 class="feedback__title section-title base-title">Свяжитесь с нашим специалистом</h2>
       <p class="feedback__text base-par">
         Заинтересованы в сотрудничестве или остались вопросы?
@@ -740,7 +740,7 @@
       <a class="feedback__tel base-link" href="tel:+7 (000) 000-00-00">+7 (000) 000-00-00</a>
     </div>
 
-    <div class="feedback__column feedback__column--right">
+    <div class="feedback__column feedback__column--right" data-aos="fade-up" data-aos-duration="2000">
       <div class="feedback__form-block">
         <form class="feedback__form" id="main_form">
           <label class="feedback__label feedback__label--name" for="main_form_name">
