@@ -1,6 +1,8 @@
 @use "../mixins";
 
 .special {
+  overflow: hidden;
+
   padding: 90px 0 90px 0;
 
   @include mixins.respond-to(mobileOnly) {
@@ -100,14 +102,20 @@
     &-item {
       max-width: 320px;
 
-      margin: 0 50px 0 0;
-
       &:last-child {
         margin: 0;
       }
 
       @include mixins.respond-to(mobileOnly) {
         margin: 0 0 50px 0;
+      }
+
+      @include mixins.respond-to(desktopS) {
+        margin: 0 10px 0 0;
+      }
+
+      @include mixins.respond-to(desktopM) {
+        margin: 0 50px 0 0;
       }
     }
 
@@ -163,15 +171,12 @@
     display: none;
 
     @include mixins.respond-to(desktopD) {
-      top: 50%;
       right: 0;
 
       display: block;
 
-      transform: translateY(-50%);
-
       & img {
-        width: 300px;
+        width: 420px;
         height: auto;
       }
     }

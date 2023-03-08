@@ -324,10 +324,15 @@
     height: 100%;
 
     &-text {
+      display: inline-block;
+
+      width: 100%;
+
       font-family: var(--font-family-second);
       font-weight: 700;
       font-size: 20px;
       line-height: 25px;
+      text-align: center;
       text-transform: uppercase;
     }
 

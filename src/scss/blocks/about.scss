@@ -13,6 +13,10 @@
     padding: 30px 0 30px 0;
   }
 
+  @include mixins.respond-to(desktopSOnly) {
+    padding: 30px 0 30px 0;
+  }
+
   &__container {
     position: relative;
 

@@ -21,16 +21,14 @@ burger.addEventListener('click', () => {
 // - Закрытие по клику на пункт меню
 nav_list.onclick = function (event) {
   let target = event.target;
-  console.log(target.tagName);
 
-  if (target.tagName != 'A') return;
+  if (target.tagName != 'A') {
+    return;
+  }
 
   burger.classList.toggle('main-nav__burger--active');
   mobile_menu.classList.toggle('main-nav__nav-menu--mobile--active');
-
-  if (mobile_menu.classList.contains('main-nav__nav-menu--mobile--active')) {
-    enableBodyScroll(mobile_menu);
-  }
+  enableBodyScroll(mobile_menu);
 };
 
 // --- Табы на главной странице
@@ -83,6 +81,21 @@ window.addEventListener('load', () => {
       let target = e.target;
       select.children[0].children[0].setAttribute('href', target.children[0].children[0].getAttribute('href'))
       select.children[1].textContent = target.children[1].textContent;
+
+      document.querySelectorAll('.index-catalogue__aside-item').forEach((item) => {
+        item.classList.remove('index-catalogue__aside-item--hidden');
+      })
+      target.closest('.index-catalogue__aside-item').classList.add('index-catalogue__aside-item--hidden');
+    })
+
+    window.addEventListener('click', (e) => {
+      if (!select_list.classList.contains('index-catalogue__aside-list--select--active')) {
+        return;
+      }
+      else if (e.target !== select && e.target.parentElement !== select && e.target.parentElement !== select_list) {
+        select_list.classList.remove('index-catalogue__aside-list--select--active');
+        select_icon.classList.remove('index-catalogue__select-icon--active');
+      }
     })
   }
 })
@@ -137,7 +150,7 @@ window.addEventListener('load', () => {
     let modal_order_item_input = document.getElementById('modal_order_item_input');
 
     order_buttons.forEach((button) => {
-      button.addEventListener('click', (e) => {
+      button.addEventListener('click', () => {
         modal_order.classList.add('modal-order--active');
         disableBodyScroll(modal_order);
 
@@ -176,7 +189,7 @@ window.addEventListener('load', () => {
   }
 })
 
-//Плавный скроллинг до якорных ссылок
+// --- Плавный скроллинг до якорных ссылок
 // $('a[href^="#"]').on('click', function (e) {
 //   e.preventDefault();
 

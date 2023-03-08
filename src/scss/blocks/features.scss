@@ -56,9 +56,9 @@
     display: flex;
     align-items: center;
 
-    @include mixins.respond-to(tabletOnly) {
-      // max-width: 250px;
-    }
+    // @include mixins.respond-to(tabletOnly) {
+    //   max-width: 250px;
+    // }
 
     &-num {
       position: relative;

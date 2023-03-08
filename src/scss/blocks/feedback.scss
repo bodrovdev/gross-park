@@ -131,7 +131,15 @@
     text-transform: uppercase;
     color: var(--color-white);
 
+    transition: color 0.1s;
+
     margin: auto 0 0 0;
+
+    &:hover {
+      color: var(--color-selective-yellow);
+
+      transition: color 0.1s;
+    }
 
     @include mixins.respond-to(mobileOnly) {
       font-size: 35px;

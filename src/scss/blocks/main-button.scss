@@ -9,6 +9,7 @@
 
   background: var(--color-selective-yellow);
   border-radius: 7px;
+  cursor: pointer;
 
   font-family: var(--font-family-second);
   font-weight: 600;
@@ -16,5 +17,13 @@
   line-height: 27px;
   text-transform: uppercase;
 
+  transition: background-color 0.3s;
+
   padding: 17px 5px 17px 5px;
+
+  &:hover {
+    background-color: var(--color-salomie);
+
+    transition: background-color 0.3s;
+  }
 }

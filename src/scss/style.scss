@@ -1,6 +1,7 @@
 //Для разработки
 @use 'global/variables';
 @use 'node_modules/swiper/swiper-bundle.min.css';
+@use 'node_modules/aos/dist/aos.css';
 
 //Миксины
 @use 'mixins/font-face';
@@ -30,7 +31,8 @@
 @use 'blocks/main-button';
 @use 'blocks/heading-underline';
 @use 'blocks/features';
-@use 'blocks/index-catalogue';@use 'blocks/special';
+@use 'blocks/index-catalogue';
+@use 'blocks/special';
 @use 'blocks/services';
 @use 'blocks/about';
 @use 'blocks/feedback';
