@@ -5,11 +5,11 @@
   font-weight: 700;
   font-size: 50px;
   line-height: 78px;
-  letter-spacing: 1px;
+  letter-spacing: 0;
   color: var(--color-mine-shaft);
 
   @include mixins.respond-to(mobileOnly) {
     font-size: 30px;
-    line-height: 45px;
+    line-height: 35px;
   }
 }

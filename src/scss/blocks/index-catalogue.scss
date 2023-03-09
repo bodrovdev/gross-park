@@ -6,6 +6,10 @@
 
   padding: 90px 0 90px 0;
 
+  @include mixins.respond-to(mobileOnly) {
+    padding: 30px 0 30px 0;
+  }
+
   &__container {
     display: flex;
     flex-direction: column;
@@ -111,7 +115,7 @@
 
       @include mixins.respond-to(mobileOnly) {
         &:last-child {
-          box-shadow: 0 1px 10px 0 var(--color-black);
+          box-shadow: 0 1px 10px 0 #b8b8b8;
         }
       }
 
@@ -408,7 +412,7 @@
   }
 
   &__item:hover::before {
-    transform: translateY(-10px);
+    transform: scale(1.02);
 
     transition: transform 0.3s;
   }

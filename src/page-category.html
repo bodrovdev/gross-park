@@ -5,21 +5,28 @@
 <main class="page-content">
 
   <section class="category-item">
-    <div class="category-item__container base-container">
+    <div class="category-item__container category-item__container--info base-container">
       <div class="category-item__info">
         <div class="category-item__info-column">
-          <h2 class="category-item__info-title section-title base-title"></h2>
-          <div class="category-item__info-text"></div>
-          <span class="category-item__info-question"></span>
-          <a class="category-item__info-tel base-link" href="tel:#"></a>
+          <h2 class="category-item__info-title section-title base-title">Название для сео</h2>
+          <div class="category-item__info-text">
+            <p>
+              Сложно сказать, почему реплицированные с зарубежных источников, современные исследования неоднозначны и будут в равной степени предоставлены сами себе. Предварительные выводы неутешительны: новая модель организационной деятельности способствует
+              подготовке и реализации форм воздействия.
+            </p>
+          </div>
+          <span class="category-item__info-question">Есть вопросы? Ваш персональный<br> менеджер:</span>
+          <a class="category-item__info-tel base-link" href="tel:+7 (000) 000 00 00">+7 (000) 000 00 00</a>
         </div>
 
-        <figure class="category-item__image base-figure">
-          <img class="category-item__img" src="img/image/category-info.png" width="414" height="354" alt="#">
+        <figure class="category-item__info-image base-figure">
+          <img class="category-item__info-img" src="img/image/category-info.png" width="414" height="354" alt="#">
         </figure>
       </div>
+    </div>
 
-      <h2 class="category-item__category-name section-title base-title"></h2>
+    <div class="category-item__container base-container">
+      <h2 class="category-item__category-name section-title base-title">Экскаваторы погрузчики</h2>
 
       <div class="category-item__wrapper">
         <div class="category-item__wrapper-item" id="order_item" data-category="Краны" data-name="JCB 3CX Super 1">
@@ -336,6 +343,7 @@
         </div>
       </div>
     </div>
+
   </section>
 
   @@include('components/_bem/_about.html')
