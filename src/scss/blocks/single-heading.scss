@@ -11,8 +11,9 @@
     margin: 0 0 30px 0;
 
     @include mixins.respond-to(mobileOnly) {
-      font-size: 30px;
-      line-height: 35px;
+      font-size: 25px;
+      line-height: 30px;
+      letter-spacing: -1px;
     }
   }
 

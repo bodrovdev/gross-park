@@ -38,6 +38,8 @@
 
   &__text {
 
+    margin: 0 30px 0 0;
+
     @include mixins.respond-to(mobileOnly) {
       margin: 0 0 30px 0;
     }

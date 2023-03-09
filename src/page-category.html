@@ -1,11 +1,342 @@
 @@include('components/_bem/_second-header.html')
 
-<main class="page-content">
-  @@include('components/_bem/_special.html', {
-  "class": "hidden",
-  })
+@@include('components/_bem/_to-index.html')
 
-  @@include('components/_bem/_content.html')
+<main class="page-content">
+
+  <section class="category-item">
+    <div class="category-item__container base-container">
+      <div class="category-item__info">
+        <div class="category-item__info-column">
+          <h2 class="category-item__info-title section-title base-title"></h2>
+          <div class="category-item__info-text"></div>
+          <span class="category-item__info-question"></span>
+          <a class="category-item__info-tel base-link" href="tel:#"></a>
+        </div>
+
+        <figure class="category-item__image base-figure">
+          <img class="category-item__img" src="img/image/category-info.png" width="414" height="354" alt="#">
+        </figure>
+      </div>
+
+      <h2 class="category-item__category-name section-title base-title"></h2>
+
+      <div class="category-item__wrapper">
+        <div class="category-item__wrapper-item" id="order_item" data-category="Краны" data-name="JCB 3CX Super 1">
+          <div class="category-item__item-content">
+            <figure class="category-item__item-image base-figure">
+              <img class="category-item__item-img" src="img/image/catalogue-item-1.png" width="306" height="169" alt="#">
+            </figure>
+            <div class="category-item__item-stats">
+              <h3 class="category-item__stats-title base-title">JCB 3CX Super</h3>
+              <ul class="category-item__stats-list base-list">
+                <li class="category-item__stats-item">
+                  <span class="category-item__stats-name">JCB 3CX Super</span>
+                  <span class="category-item__stats-value">2350 мм</span>
+                </li>
+                <li class="category-item__stats-item">
+                  <span class="category-item__stats-name">Объем ковша</span>
+                  <span class="category-item__stats-value">1.1 куб.м</span>
+                </li>
+                <li class="category-item__stats-item">
+                  <span class="category-item__stats-name">Высота выгрузки</span>
+                  <span class="category-item__stats-value">2.64 мм</span>
+                </li>
+                <li class="category-item__stats-item">
+                  <span class="category-item__stats-name">Ширина ковша экскаватора</span>
+                  <span class="category-item__stats-value">457 мм</span>
+                </li>
+              </ul>
+              <div class="category-item__stats-price">
+                <div class="category-item__price-item">
+                  <span class="category-item__price-text">Стоимость за смену </span>
+                  <span class="category-item__price-value">12 000 ₽</span>
+                </div>
+                <div class="category-item__price-item">
+                  <span class="category-item__price-text">Цена за час</span>
+                  <span class="category-item__price-value">1 714 ₽</span>
+                </div>
+              </div>
+            </div>
+            <button class="category-item__main-button main-button base-button" type="button" id="order_modal_button">Заказать в один клик</button>
+          </div>
+        </div>
+        <div class="category-item__wrapper-item" id="order_item" data-category="Краны" data-name="JCB 3CX Super 1">
+          <div class="category-item__item-content">
+            <figure class="category-item__item-image base-figure">
+              <img class="category-item__item-img" src="img/image/catalogue-item-1.png" width="306" height="169" alt="#">
+            </figure>
+            <div class="category-item__item-stats">
+              <h3 class="category-item__stats-title base-title">JCB 3CX Super</h3>
+              <ul class="category-item__stats-list base-list">
+                <li class="category-item__stats-item">
+                  <span class="category-item__stats-name">JCB 3CX Super</span>
+                  <span class="category-item__stats-value">2350 мм</span>
+                </li>
+                <li class="category-item__stats-item">
+                  <span class="category-item__stats-name">Объем ковша</span>
+                  <span class="category-item__stats-value">1.1 куб.м</span>
+                </li>
+                <li class="category-item__stats-item">
+                  <span class="category-item__stats-name">Высота выгрузки</span>
+                  <span class="category-item__stats-value">2.64 мм</span>
+                </li>
+                <li class="category-item__stats-item">
+                  <span class="category-item__stats-name">Ширина ковша экскаватора</span>
+                  <span class="category-item__stats-value">457 мм</span>
+                </li>
+              </ul>
+              <div class="category-item__stats-price">
+                <div class="category-item__price-item">
+                  <span class="category-item__price-text">Стоимость за смену </span>
+                  <span class="category-item__price-value">12 000 ₽</span>
+                </div>
+                <div class="category-item__price-item">
+                  <span class="category-item__price-text">Цена за час</span>
+                  <span class="category-item__price-value">1 714 ₽</span>
+                </div>
+              </div>
+            </div>
+            <button class="category-item__main-button main-button base-button" type="button" id="order_modal_button">Заказать в один клик</button>
+          </div>
+        </div>
+        <div class="category-item__wrapper-item" id="order_item" data-category="Краны" data-name="JCB 3CX Super 1">
+          <div class="category-item__item-content">
+            <figure class="category-item__item-image base-figure">
+              <img class="category-item__item-img" src="img/image/catalogue-item-1.png" width="306" height="169" alt="#">
+            </figure>
+            <div class="category-item__item-stats">
+              <h3 class="category-item__stats-title base-title">JCB 3CX Super</h3>
+              <ul class="category-item__stats-list base-list">
+                <li class="category-item__stats-item">
+                  <span class="category-item__stats-name">JCB 3CX Super</span>
+                  <span class="category-item__stats-value">2350 мм</span>
+                </li>
+                <li class="category-item__stats-item">
+                  <span class="category-item__stats-name">Объем ковша</span>
+                  <span class="category-item__stats-value">1.1 куб.м</span>
+                </li>
+                <li class="category-item__stats-item">
+                  <span class="category-item__stats-name">Высота выгрузки</span>
+                  <span class="category-item__stats-value">2.64 мм</span>
+                </li>
+                <li class="category-item__stats-item">
+                  <span class="category-item__stats-name">Ширина ковша экскаватора</span>
+                  <span class="category-item__stats-value">457 мм</span>
+                </li>
+              </ul>
+              <div class="category-item__stats-price">
+                <div class="category-item__price-item">
+                  <span class="category-item__price-text">Стоимость за смену </span>
+                  <span class="category-item__price-value">12 000 ₽</span>
+                </div>
+                <div class="category-item__price-item">
+                  <span class="category-item__price-text">Цена за час</span>
+                  <span class="category-item__price-value">1 714 ₽</span>
+                </div>
+              </div>
+            </div>
+            <button class="category-item__main-button main-button base-button" type="button" id="order_modal_button">Заказать в один клик</button>
+          </div>
+        </div>
+        <div class="category-item__wrapper-item" id="order_item" data-category="Краны" data-name="JCB 3CX Super 1">
+          <div class="category-item__item-content">
+            <figure class="category-item__item-image base-figure">
+              <img class="category-item__item-img" src="img/image/catalogue-item-1.png" width="306" height="169" alt="#">
+            </figure>
+            <div class="category-item__item-stats">
+              <h3 class="category-item__stats-title base-title">JCB 3CX Super</h3>
+              <ul class="category-item__stats-list base-list">
+                <li class="category-item__stats-item">
+                  <span class="category-item__stats-name">JCB 3CX Super</span>
+                  <span class="category-item__stats-value">2350 мм</span>
+                </li>
+                <li class="category-item__stats-item">
+                  <span class="category-item__stats-name">Объем ковша</span>
+                  <span class="category-item__stats-value">1.1 куб.м</span>
+                </li>
+                <li class="category-item__stats-item">
+                  <span class="category-item__stats-name">Высота выгрузки</span>
+                  <span class="category-item__stats-value">2.64 мм</span>
+                </li>
+                <li class="category-item__stats-item">
+                  <span class="category-item__stats-name">Ширина ковша экскаватора</span>
+                  <span class="category-item__stats-value">457 мм</span>
+                </li>
+              </ul>
+              <div class="category-item__stats-price">
+                <div class="category-item__price-item">
+                  <span class="category-item__price-text">Стоимость за смену </span>
+                  <span class="category-item__price-value">12 000 ₽</span>
+                </div>
+                <div class="category-item__price-item">
+                  <span class="category-item__price-text">Цена за час</span>
+                  <span class="category-item__price-value">1 714 ₽</span>
+                </div>
+              </div>
+            </div>
+            <button class="category-item__main-button main-button base-button" type="button" id="order_modal_button">Заказать в один клик</button>
+          </div>
+        </div>
+        <div class="category-item__wrapper-item" id="order_item" data-category="Краны" data-name="JCB 3CX Super 1">
+          <div class="category-item__item-content">
+            <figure class="category-item__item-image base-figure">
+              <img class="category-item__item-img" src="img/image/catalogue-item-1.png" width="306" height="169" alt="#">
+            </figure>
+            <div class="category-item__item-stats">
+              <h3 class="category-item__stats-title base-title">JCB 3CX Super</h3>
+              <ul class="category-item__stats-list base-list">
+                <li class="category-item__stats-item">
+                  <span class="category-item__stats-name">JCB 3CX Super</span>
+                  <span class="category-item__stats-value">2350 мм</span>
+                </li>
+                <li class="category-item__stats-item">
+                  <span class="category-item__stats-name">Объем ковша</span>
+                  <span class="category-item__stats-value">1.1 куб.м</span>
+                </li>
+                <li class="category-item__stats-item">
+                  <span class="category-item__stats-name">Высота выгрузки</span>
+                  <span class="category-item__stats-value">2.64 мм</span>
+                </li>
+                <li class="category-item__stats-item">
+                  <span class="category-item__stats-name">Ширина ковша экскаватора</span>
+                  <span class="category-item__stats-value">457 мм</span>
+                </li>
+              </ul>
+              <div class="category-item__stats-price">
+                <div class="category-item__price-item">
+                  <span class="category-item__price-text">Стоимость за смену </span>
+                  <span class="category-item__price-value">12 000 ₽</span>
+                </div>
+                <div class="category-item__price-item">
+                  <span class="category-item__price-text">Цена за час</span>
+                  <span class="category-item__price-value">1 714 ₽</span>
+                </div>
+              </div>
+            </div>
+            <button class="category-item__main-button main-button base-button" type="button" id="order_modal_button">Заказать в один клик</button>
+          </div>
+        </div>
+        <div class="category-item__wrapper-item" id="order_item" data-category="Краны" data-name="JCB 3CX Super 1">
+          <div class="category-item__item-content">
+            <figure class="category-item__item-image base-figure">
+              <img class="category-item__item-img" src="img/image/catalogue-item-1.png" width="306" height="169" alt="#">
+            </figure>
+            <div class="category-item__item-stats">
+              <h3 class="category-item__stats-title base-title">JCB 3CX Super</h3>
+              <ul class="category-item__stats-list base-list">
+                <li class="category-item__stats-item">
+                  <span class="category-item__stats-name">JCB 3CX Super</span>
+                  <span class="category-item__stats-value">2350 мм</span>
+                </li>
+                <li class="category-item__stats-item">
+                  <span class="category-item__stats-name">Объем ковша</span>
+                  <span class="category-item__stats-value">1.1 куб.м</span>
+                </li>
+                <li class="category-item__stats-item">
+                  <span class="category-item__stats-name">Высота выгрузки</span>
+                  <span class="category-item__stats-value">2.64 мм</span>
+                </li>
+                <li class="category-item__stats-item">
+                  <span class="category-item__stats-name">Ширина ковша экскаватора</span>
+                  <span class="category-item__stats-value">457 мм</span>
+                </li>
+              </ul>
+              <div class="category-item__stats-price">
+                <div class="category-item__price-item">
+                  <span class="category-item__price-text">Стоимость за смену </span>
+                  <span class="category-item__price-value">12 000 ₽</span>
+                </div>
+                <div class="category-item__price-item">
+                  <span class="category-item__price-text">Цена за час</span>
+                  <span class="category-item__price-value">1 714 ₽</span>
+                </div>
+              </div>
+            </div>
+            <button class="category-item__main-button main-button base-button" type="button" id="order_modal_button">Заказать в один клик</button>
+          </div>
+        </div>
+        <div class="category-item__wrapper-item" id="order_item" data-category="Краны" data-name="JCB 3CX Super 1">
+          <div class="category-item__item-content">
+            <figure class="category-item__item-image base-figure">
+              <img class="category-item__item-img" src="img/image/catalogue-item-1.png" width="306" height="169" alt="#">
+            </figure>
+            <div class="category-item__item-stats">
+              <h3 class="category-item__stats-title base-title">JCB 3CX Super</h3>
+              <ul class="category-item__stats-list base-list">
+                <li class="category-item__stats-item">
+                  <span class="category-item__stats-name">JCB 3CX Super</span>
+                  <span class="category-item__stats-value">2350 мм</span>
+                </li>
+                <li class="category-item__stats-item">
+                  <span class="category-item__stats-name">Объем ковша</span>
+                  <span class="category-item__stats-value">1.1 куб.м</span>
+                </li>
+                <li class="category-item__stats-item">
+                  <span class="category-item__stats-name">Высота выгрузки</span>
+                  <span class="category-item__stats-value">2.64 мм</span>
+                </li>
+                <li class="category-item__stats-item">
+                  <span class="category-item__stats-name">Ширина ковша экскаватора</span>
+                  <span class="category-item__stats-value">457 мм</span>
+                </li>
+              </ul>
+              <div class="category-item__stats-price">
+                <div class="category-item__price-item">
+                  <span class="category-item__price-text">Стоимость за смену </span>
+                  <span class="category-item__price-value">12 000 ₽</span>
+                </div>
+                <div class="category-item__price-item">
+                  <span class="category-item__price-text">Цена за час</span>
+                  <span class="category-item__price-value">1 714 ₽</span>
+                </div>
+              </div>
+            </div>
+            <button class="category-item__main-button main-button base-button" type="button" id="order_modal_button">Заказать в один клик</button>
+          </div>
+        </div>
+        <div class="category-item__wrapper-item" id="order_item" data-category="Краны" data-name="JCB 3CX Super 1">
+          <div class="category-item__item-content">
+            <figure class="category-item__item-image base-figure">
+              <img class="category-item__item-img" src="img/image/catalogue-item-1.png" width="306" height="169" alt="#">
+            </figure>
+            <div class="category-item__item-stats">
+              <h3 class="category-item__stats-title base-title">JCB 3CX Super</h3>
+              <ul class="category-item__stats-list base-list">
+                <li class="category-item__stats-item">
+                  <span class="category-item__stats-name">JCB 3CX Super</span>
+                  <span class="category-item__stats-value">2350 мм</span>
+                </li>
+                <li class="category-item__stats-item">
+                  <span class="category-item__stats-name">Объем ковша</span>
+                  <span class="category-item__stats-value">1.1 куб.м</span>
+                </li>
+                <li class="category-item__stats-item">
+                  <span class="category-item__stats-name">Высота выгрузки</span>
+                  <span class="category-item__stats-value">2.64 мм</span>
+                </li>
+                <li class="category-item__stats-item">
+                  <span class="category-item__stats-name">Ширина ковша экскаватора</span>
+                  <span class="category-item__stats-value">457 мм</span>
+                </li>
+              </ul>
+              <div class="category-item__stats-price">
+                <div class="category-item__price-item">
+                  <span class="category-item__price-text">Стоимость за смену </span>
+                  <span class="category-item__price-value">12 000 ₽</span>
+                </div>
+                <div class="category-item__price-item">
+                  <span class="category-item__price-text">Цена за час</span>
+                  <span class="category-item__price-value">1 714 ₽</span>
+                </div>
+              </div>
+            </div>
+            <button class="category-item__main-button main-button base-button" type="button" id="order_modal_button">Заказать в один клик</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
   @@include('components/_bem/_about.html')
 
