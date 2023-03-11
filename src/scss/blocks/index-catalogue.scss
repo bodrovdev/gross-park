@@ -301,15 +301,15 @@
     }
 
     @include mixins.respond-to(tabletOnly) {
-      display: grid;
-      grid-template: repeat(3, 1fr) / repeat(2, 1fr);
+      display: inline-grid;
+      grid-template: repeat(3, auto) / repeat(2, auto);
       grid-auto-flow: row;
       grid-gap: 24px;
     }
 
     @include mixins.respond-to(desktopS) {
-      display: grid;
-      grid-template: repeat(2, 1fr) / repeat(3, 1fr);
+      display: inline-grid;
+      grid-template: repeat(2, auto) / repeat(3, auto);
       grid-auto-flow: row;
       grid-gap: 24px;
     }

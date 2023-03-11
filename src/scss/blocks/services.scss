@@ -9,8 +9,8 @@
   }
 
   &__wrapper {
-    display: grid;
-    grid-template: repeat(2, 1fr) / repeat(3, 1fr);
+    display: inline-grid;
+    grid-template: repeat(2, auto) / repeat(3, auto);
 
     grid-auto-flow: row;
 
@@ -39,7 +39,7 @@
 
     // width: fit-content;
     // height: fit-content;
-
+    max-width: 415px;
     transform-style: preserve-3d;
     perspective: 1000px;
 
@@ -166,11 +166,13 @@
     &-info {
       transform: translateZ(60px);
 
+      padding: 0 25px;
+
       & span {
         font-family: var(--font-family-second);
         font-weight: 700;
         font-size: 30px;
-        line-height: 32px;
+        line-height: 35px;
 
         display: flex;
         align-items: center;
